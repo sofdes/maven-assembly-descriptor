@@ -1,0 +1,39 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+    <id>distribution</id>
+
+    <formats>
+        <format>tar</format>
+    </formats>
+
+    <files>
+        <file>
+            <source>${basedir}/target/${artifactId}.war</source>
+            <destName>${artifactId}.war</destName>
+        </file>
+    </files>
+
+    <!-- Copy scripts and config to /deploy directory -->
+    <fileSets>
+        <!-- chmod a+x *.sh files -->
+        <fileSet>
+            <directory>${basedir}/target/generated-config</directory>
+            <includes>
+                <include>**/*.sh</include>
+            </includes>
+            <fileMode>0777</fileMode>
+            <outputDirectory>/deploy</outputDirectory>
+        </fileSet>
+        <!-- Copy all other files without adding execute permissions -->
+        <fileSet>
+            <directory>${basedir}/target/generated-config</directory>
+            <excludes>
+                <exclude>**/*.sh</exclude>
+            </excludes>
+            <outputDirectory>/deploy</outputDirectory>
+        </fileSet>
+    </fileSets>
+
+</assembly>
