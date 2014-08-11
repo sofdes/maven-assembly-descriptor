@@ -25,7 +25,7 @@ Package together war files with other distribution files required for remote dep
                 <dependency>
                     <groupId>com.ariht</groupId>
                     <artifactId>maven-assembly-descriptor</artifactId>
-                    <version>0.9.1</version>
+                    <version>0.9.2</version>
                 </dependency>
             </dependencies>
             <executions>

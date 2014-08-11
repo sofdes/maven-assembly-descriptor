@@ -2,8 +2,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ariht</groupId>
     <artifactId>maven-assembly-descriptor</artifactId>
+    <name>maven-assembly-descriptor</name>
     <version>0.9.1-SNAPSHOT</version>
     <url>https://github.com/sofdes/maven-assembly-descriptor</url>
+
+    <description>
+        Assembles web application and associated deployment scripts and config
+        into single archive for deployment to remote machines.
+    </description>
 
     <licenses>
         <license>
