@@ -8,6 +8,8 @@
         <format>tar</format>
     </formats>
 
+    <!-- Copy web archive to assembly target - assumes no version Id in the filename -->
+    <!-- (use 'finalName' in build to configure) -->
     <files>
         <file>
             <source>${basedir}/target/${artifactId}.war</source>
@@ -26,7 +28,8 @@
             <fileMode>0777</fileMode>
             <outputDirectory>/deploy</outputDirectory>
         </fileSet>
-        <!-- Copy all other files without adding execute permissions -->
+
+        <!-- Remaining files without changing permissions -->
         <fileSet>
             <directory>${basedir}/target/generated-config</directory>
             <excludes>
@@ -34,6 +37,7 @@
             </excludes>
             <outputDirectory>/deploy</outputDirectory>
         </fileSet>
+
     </fileSets>
 
 </assembly>
