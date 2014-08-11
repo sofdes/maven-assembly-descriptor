@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ariht</groupId>
     <artifactId>maven-assembly-descriptor</artifactId>
-    <version>0.9.1-SNAPSHOT</version>
+    <version>0.9.1</version>
     <url>https://github.com/sofdes/maven-assembly-descriptor</url>
 
     <licenses>
@@ -17,7 +17,7 @@
         <connection>scm:git:git@github.com:sofdes/maven-assembly-descriptor.git</connection>
         <url>scm:git:git@github.com:sofdes/maven-assembly-descriptor.git</url>
         <developerConnection>scm:git:git@github.com:sofdes/maven-assembly-descriptor.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>maven-assembly-descriptor-0.9.1</tag>
     </scm>
 
     <developers>
